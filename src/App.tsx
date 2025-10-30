@@ -16,7 +16,6 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>다솔아 이거 눌러보셈 ㅋㅋ</h1>
       <h2>제목을 추가함</h2>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>

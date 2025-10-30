@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # ubuntu-latest 이미지를 이용해서 실행한 컨테이너에서 작업하기
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,9 +32,9 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-
+      # 우리가 업로드한 react vite 프로젝트를 이용해서 build 한다.
       - name: Install deps
-        run: npm ci
+        run: npm ci   # build 한 결과물은 ./dist 폴더안에 만들어진다.
 
 
       - name: Build (Vite)
